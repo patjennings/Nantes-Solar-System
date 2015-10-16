@@ -76,7 +76,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>natural</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[assets/natural.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[assets/shp/natural.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -92,7 +92,7 @@
 		<StyleName>orbites</StyleName>
 		<Datasource>
 			<Parameter name="type"><![CDATA[shape]]></Parameter>
-			<Parameter name="file"><![CDATA[assets/nantes_solsysBig_tracks]]></Parameter>
+			<Parameter name="file"><![CDATA[assets/shp/nantes_solsysBig_tracks]]></Parameter>
 		</Datasource>
 	</Layer>
 
@@ -106,7 +106,7 @@
 	</Style>
 	<Style name="nantessolsysbigpoint" filter-mode="first">
 		<Rule>
-			<MarkersSymbolizer width="6" fill="#ffffff" stroke="#881133" allow-overlap="true" ignore-placement="true" file="assets/dot.svg"/>
+			<MarkersSymbolizer width="6" fill="#ffffff" stroke="#881133" allow-overlap="true" ignore-placement="true" file="assets/svg/dot.svg"/>
 		</Rule>
 	</Style>
 	<Layer name="nantessolsysbigpoint"
@@ -114,7 +114,7 @@
 		<StyleName>nantessolsysbigpoint</StyleName>
 		<StyleName>nantessolsysbigpoint-labels</StyleName>
 		<Datasource>
-			<Parameter name="file"><![CDATA[assets/nantes_solsysBig_points.shp]]></Parameter>
+			<Parameter name="file"><![CDATA[assets/shp/nantes_solsysBig_points.shp]]></Parameter>
 			<Parameter name="id"><![CDATA[nantessolsysbigpoint]]></Parameter>
 			<Parameter name="project"><![CDATA[System_solaire]]></Parameter>
 			<Parameter name="srs"><![CDATA[]]></Parameter>

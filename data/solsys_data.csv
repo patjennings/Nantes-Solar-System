@@ -1,0 +1,21 @@
+Nom,Diamètre de l'astre (km),Distance soleil - planète (km),Distance cible (m),Dénominateur,Diamètre cible (m),Diamètre cible (cm),
+Soleil,"1 392 684,000",0,"0,000",,"1,546","154,640",Grand ballon de piscine
+Mercure,"4 878,000",57 910 000,"64,302","900 600,000","0,005","0,542",Petit pois
+Venus,"12 104,000",108 200 000,"120,142","900 600,000","0,013","1,344",Raisin sec
+Terre,"12 742,000",149 600 000,"166,111","900 600,000","0,014","1,415",Bout de sucre roux
+Mars,"6 780,000",227 937 000,"253,095","900 600,000","0,008","0,753",Petit pois
+Jupiter,"139 822,000",778 500 000,"864,424","900 600,000","0,155","15,525",Handball junior (?)
+Saturne,"116 464,000",1 433 000 000,"1 591,161","900 600,000","0,129","12,932",
+Uranus,"50 724,000",2 692 000 000,"2 989,118","900 600,000","0,056","5,632",Un autre fruit
+Neptune,"49 244,000",4 503 000 000,"5 000,000","900 600,000","0,055","5,468",Oignon rouge
+,,,,,,,
+Proxima Centauri,,39 925 420 000 000,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+On change la valeur de D10 afin d'obtenir les valeurs rapportées au rayon voulu,,,,,,,
+Ex. Je veux que mon système solaire parte de la Tour de Bretagne(Soeil)  et aille jusqu'au pont de Cheviré (Orbite de Neptune). Je rentre la distance Tour – Pont dans D10,,,,,,,
+,,,,,,,
+Outils,,,,,,,
+"4,22 années lumière (al)",,,,,,,
+1 al = 9461000000000 km (9461 miliards),,,,,,,

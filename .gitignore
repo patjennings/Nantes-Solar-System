@@ -1,4 +1,6 @@
-assets/*
+assets/pbf/*
+assets/shp/land_polygons.*
+assets/shp/natural.*
 fonts/*
 render/*
 _old/*
