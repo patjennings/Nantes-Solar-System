@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#0B0D19" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34" font-directory="/Users/thomas/Library/Fonts">
+
+	<Parameters>
+		<Parameter name="bounds">-180,-85.05112877980659,180,85.05112877980659</Parameter>
+		<Parameter name="center">0,0,2</Parameter>
+		<Parameter name="format">png8</Parameter>
+		<Parameter name="minzoom">0</Parameter>
+		<Parameter name="maxzoom">22</Parameter>
+		<Parameter name="scale">1</Parameter>
+		<Parameter name="metatile">2</Parameter>
+		<Parameter name="id"><![CDATA[postgis_test]]></Parameter>
+		<Parameter name="_updated">1443381635000</Parameter>
+		<Parameter name="name"><![CDATA[PostGIS test]]></Parameter>
+		<Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+		<Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+	</Parameters>
+
+
+
+
+    <!-- RUES -->
+
+	
+<Style name="roads" filter-mode="first">
+		<Rule>
+			<LineSymbolizer stroke-width="1" stroke="#5E5F67" stroke-opacity="0.75"/>
+		</Rule>
+	</Style>
+	<Layer name="roads" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+		<StyleName>roads</StyleName>
+		<Datasource>
+			<Parameter name="type"><![CDATA[postgis]]></Parameter>
+			<Parameter name="table"><![CDATA[(select way from public.planet_osm_line where highway is not null) as road]]></Parameter>
+			<Parameter name="key_field"><![CDATA[]]></Parameter>
+			<Parameter name="geometry_field"><![CDATA[]]></Parameter>
+			<Parameter name="extent_cache"><![CDATA[dynamic]]></Parameter>
+			<Parameter name="extent"><![CDATA[]]></Parameter>
+			<Parameter name="host"><![CDATA[localhost]]></Parameter>
+			<Parameter name="port"><![CDATA[5432]]></Parameter>
+			<Parameter name="user"><![CDATA[thomas]]></Parameter>
+			<Parameter name="dbname"><![CDATA[gis]]></Parameter>
+			<Parameter name="password"><![CDATA[]]></Parameter>
+		</Datasource>
+	</Layer>
+
+
+
+	<!-- LAND -->
+
+	<!--
+	<Style name="land">
+		<Rule>
+			<PolygonSymbolizer fill="#fc0"/>
+		</Rule>
+	</Style>
+	<Layer name="land">
+		<StyleName>land</StyleName>
+		<Datasource>
+			<Parameter name="type"><![CDATA[shape]]></Parameter>
+			<Parameter name="file"><![CDATA[assets/land_polygons]]></Parameter>
+		</Datasource>
+	</Layer>
+	-->
+	
+	<!-- EAU -->
+
+	
+	<Style name="natural" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#000" />
+  </Rule>
+</Style>
+<Layer name="natural"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>natural</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[assets/natural.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+	
+	<!-- ORBITES -->
+
+	<Style name="orbites">
+		<Rule>
+			<LineSymbolizer stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round" stroke-opacity="0.5"/>
+		</Rule>
+	</Style>
+	<Layer name="orbites" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+		<StyleName>orbites</StyleName>
+		<Datasource>
+			<Parameter name="type"><![CDATA[shape]]></Parameter>
+			<Parameter name="file"><![CDATA[assets/nantes_solsysBig_tracks]]></Parameter>
+		</Datasource>
+	</Layer>
+
+
+	<!-- LABELS -->
+	
+	<Style name="nantessolsysbigpoint-labels" filter-mode="first">
+		<Rule>
+			<TextSymbolizer face-name="Futura Bold" size="11" fill="#ffffff" placement-type="simple" placements="N" dy="12" character-spacing="3" text-transform="uppercase"><![CDATA[[name]]]></TextSymbolizer>
+		</Rule>
+	</Style>
+	<Style name="nantessolsysbigpoint" filter-mode="first">
+		<Rule>
+			<MarkersSymbolizer width="6" fill="#ffffff" stroke="#881133" allow-overlap="true" ignore-placement="true" file="assets/dot.svg"/>
+		</Rule>
+	</Style>
+	<Layer name="nantessolsysbigpoint"
+	srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+		<StyleName>nantessolsysbigpoint</StyleName>
+		<StyleName>nantessolsysbigpoint-labels</StyleName>
+		<Datasource>
+			<Parameter name="file"><![CDATA[assets/nantes_solsysBig_points.shp]]></Parameter>
+			<Parameter name="id"><![CDATA[nantessolsysbigpoint]]></Parameter>
+			<Parameter name="project"><![CDATA[System_solaire]]></Parameter>
+			<Parameter name="srs"><![CDATA[]]></Parameter>
+			<Parameter name="type"><![CDATA[shape]]></Parameter>
+		</Datasource>
+	</Layer>
+</Map>

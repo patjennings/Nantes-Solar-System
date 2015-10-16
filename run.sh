@@ -1,0 +1,1 @@
+/usr/bin/python ~/Documents/Dev/Mapnik/nantes_systeme_solaire/generate_image.py
